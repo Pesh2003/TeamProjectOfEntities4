@@ -1,0 +1,31 @@
+CREATE DATABASE "Users"
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = -1;
+
+--------------------------------------------------
+
+CREATE TABLE Users
+(
+    Id SERIAL NOT NULL,
+    Username varchar(50) NOT NULL,
+    Password varchar(50) NOT NULL,
+    Description text NOT NULL,
+    UserTypeId int NOT NULL,
+    Constraint PK_Users PRIMARY KEY(Id)
+    )
+
+---------------------------------------------------
+
+CREATE TABLE UserTypes
+(
+    Id SERIAL NOT NULL,
+    UserType varchar(50) NOT NULL,
+    Constraint PK_UserTypes PRIMARY KEY(Id)
+    )
+
+-----------------------------------------------------
+
+ALTER TABLE Users
+ADD CONSTRAINT FK_Users_UserTypes FOREIGN KEY (UserTypeId) REFERENCES UserTypes(Id)
