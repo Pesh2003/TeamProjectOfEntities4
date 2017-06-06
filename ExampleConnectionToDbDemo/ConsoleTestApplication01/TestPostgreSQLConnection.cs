@@ -6,19 +6,19 @@
 
     internal class TestPostgreSQLConnection
     {
-        internal static IList<Car> GetCars()
+        internal static IList<User> GetUsers()
         {
             string connString = String.Format(Constant.PostgreSQLConnectionString);
             NpgsqlConnection conn = new NpgsqlConnection(connString);
             conn.Open();
-            string sql = "SELECT \"Id\", \"Name\"  FROM public.\"Cars\"";
+            string sql = "SELECT Id, Username, Password, Description, UserTypeId  FROM public.Users";
             NpgsqlCommand command = new NpgsqlCommand(sql, conn);
             NpgsqlDataReader dr = command.ExecuteReader();
-            IList<Car> list = new List<Car>();
+            IList<User> list = new List<User>();
 
             while (dr.Read())
             {
-                list.Add(new Car(int.Parse(dr[0].ToString()), dr[1].ToString()));
+                list.Add(new User(int.Parse(dr[0].ToString()), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), int.Parse(dr[4].ToString())));
             }
 
             conn.Close();
