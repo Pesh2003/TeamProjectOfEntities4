@@ -38,9 +38,21 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EntityFramework6.Npgsql, Version=3.1.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework6.Npgsql.3.1.1\lib\net45\EntityFramework6.Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=3.2.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.2.3\lib\net451\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +66,12 @@
       <DependentUpon>201706080910043_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PostgreSQLMigration\201706081220514_Initial.cs" />
+    <Compile Include="PostgreSQLMigration\201706081220514_Initial.Designer.cs">
+      <DependentUpon>201706081220514_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostgreSQLMigration\PostgreSQLConfiguration.cs" />
+    <Compile Include="PostgreSQL\UsersDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLServer\CorierServiceContext.cs" />
     <Compile Include="SQLServer\InitialDataToLoad\DataCities.cs" />
@@ -77,7 +95,11 @@
     <EmbeddedResource Include="Migrations\201706080910043_initial.resx">
       <DependentUpon>201706080910043_initial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PostgreSQLMigration\201706081220514_Initial.resx">
+      <DependentUpon>201706081220514_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
