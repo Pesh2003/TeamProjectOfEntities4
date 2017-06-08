@@ -5,6 +5,12 @@ namespace CourierService.DbContextModels.SQLServer
 {
     public class City
     {
+        public City()
+        {
+            this.Offices = new HashSet<Office>();
+            this.Services = new HashSet<Service>();
+        }
+
         public int Id { get; set; }
 
         [Required]

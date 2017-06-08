@@ -49,13 +49,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201706070905253_Initial.cs" />
-    <Compile Include="Migrations\201706070905253_Initial.Designer.cs">
-      <DependentUpon>201706070905253_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201706080910043_initial.cs" />
+    <Compile Include="Migrations\201706080910043_initial.Designer.cs">
+      <DependentUpon>201706080910043_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLServer\CorierServiceContext.cs" />
+    <Compile Include="SQLServer\InitialDataToLoad\DataCities.cs" />
+    <Compile Include="SQLServer\InitialDataToLoad\DataOffices.cs" />
+    <Compile Include="SQLServer\InitialDataToLoad\DataServiceOptions.cs" />
+    <Compile Include="SQLServer\InitialDataToLoad\DataServices.cs" />
+    <Compile Include="SQLServer\InitialDataToLoad\DataServiceTypes.cs" />
+    <Compile Include="SQLServer\InitialDataToLoad\InicialDataToSQLServer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -68,8 +74,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706070905253_Initial.resx">
-      <DependentUpon>201706070905253_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706080910043_initial.resx">
+      <DependentUpon>201706080910043_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

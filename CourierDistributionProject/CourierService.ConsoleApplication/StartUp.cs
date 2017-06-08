@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CourierService.DbContext.SQLServer;
+using CourierService.DbContext.SQLServer.InitialDataToLoad;
+using CourierService.DbContextModels.SQLServer;
+using System;
 
 namespace CourierService.ConsoleApplication
 {
@@ -10,6 +9,9 @@ namespace CourierService.ConsoleApplication
     {
         static void Main(string[] args)
         {
-        }
+            var initialDataToSQLServer = new InicialDataToSQLServer();
+            initialDataToSQLServer.InitialDataToSQLServeLoad();
+        }        
     }
 }
+

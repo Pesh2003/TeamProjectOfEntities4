@@ -1,10 +1,10 @@
-﻿using CourierService.DbContextModels.SQLServer;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure.Annotations;
-
-namespace CourierServiceDbContext.SQLServer
+﻿namespace CourierService.DbContext.SQLServer
 {
+    using CourierService.DbContextModels.SQLServer;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity;
+    using System.Data.Entity.Infrastructure.Annotations;
+
     public class CorierServiceContext : DbContext
     {
         public CorierServiceContext() : base("CorierServiceContextConection")

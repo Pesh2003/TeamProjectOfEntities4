@@ -5,6 +5,10 @@ namespace CourierService.DbContextModels.SQLServer
 {
     public class ServicesType
     {
+        public ServicesType()
+        {
+            this.ServiceOptions = new HashSet<ServiceOption>();
+        }
         public int Id { get; set; }
 
         [Required]

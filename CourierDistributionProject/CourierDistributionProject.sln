@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourierServiceDbContext", "CourierService.DbContext\CourierServiceDbContext.csproj", "{96FCEC9D-4D1D-45EF-AEC0-D127BE4A9A5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourierService.DbContext", "CourierService.DbContext\CourierService.DbContext.csproj", "{96FCEC9D-4D1D-45EF-AEC0-D127BE4A9A5B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourierService.DbContextModels", "CourierService.DbContextModels\CourierService.DbContextModels.csproj", "{5AE857B8-C514-41BC-9AB4-4225A6F20B80}"
 EndProject

@@ -22,5 +22,9 @@ namespace CourierService.DbContextModels.SQLServer
 
         [Required]        
         public virtual City City { get; set; }
+
+        [Required]
+        public int OfficeId { get; set; }        
+        
     }
 }

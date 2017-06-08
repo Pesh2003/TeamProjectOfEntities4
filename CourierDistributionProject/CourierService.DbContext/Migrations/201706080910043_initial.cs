@@ -3,7 +3,7 @@ namespace CourierService.DbContext.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initial : DbMigration
+    public partial class initial : DbMigration
     {
         public override void Up()
         {
@@ -36,6 +36,7 @@ namespace CourierService.DbContext.Migrations
                         Details = c.String(nullable: false, storeType: "ntext"),
                         IsTaken = c.Boolean(nullable: false),
                         CreateDate = c.DateTime(nullable: false),
+                        OfficeId = c.Int(nullable: false),
                         City_Id = c.Int(nullable: false),
                         ServiceOption_Id = c.Int(nullable: false),
                     })
@@ -50,9 +51,9 @@ namespace CourierService.DbContext.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Weight = c.Single(nullable: false),
+                        Weight = c.Double(nullable: false),
                         Price = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        Time = c.DateTime(nullable: false),
+                        TimeDuration = c.Double(nullable: false),
                         ServicesType_Id = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
