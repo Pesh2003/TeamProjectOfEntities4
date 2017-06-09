@@ -66,11 +66,14 @@
       <DependentUpon>201706080910043_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="PostgreSQLMigration\201706081220514_Initial.cs" />
-    <Compile Include="PostgreSQLMigration\201706081220514_Initial.Designer.cs">
-      <DependentUpon>201706081220514_Initial.cs</DependentUpon>
+    <Compile Include="PostgreSQLMigrations\201706090946262_Initial.cs" />
+    <Compile Include="PostgreSQLMigrations\201706090946262_Initial.Designer.cs">
+      <DependentUpon>201706090946262_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="PostgreSQLMigration\PostgreSQLConfiguration.cs" />
+    <Compile Include="PostgreSQLMigrations\PostgreSQLConfiguration.cs" />
+    <Compile Include="PostgreSQL\DataToLoad\DataUsers.cs" />
+    <Compile Include="PostgreSQL\DataToLoad\DataUserTypes.cs" />
+    <Compile Include="PostgreSQL\DataToLoad\InicialDataToPostgreSQL.cs" />
     <Compile Include="PostgreSQL\UsersDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLServer\CorierServiceContext.cs" />
@@ -95,8 +98,8 @@
     <EmbeddedResource Include="Migrations\201706080910043_initial.resx">
       <DependentUpon>201706080910043_initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PostgreSQLMigration\201706081220514_Initial.resx">
-      <DependentUpon>201706081220514_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="PostgreSQLMigrations\201706090946262_Initial.resx">
+      <DependentUpon>201706090946262_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

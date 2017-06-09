@@ -1,4 +1,4 @@
-namespace CourierService.DbContext.PostgreSQLMigration
+namespace CourierService.DbContext.PostgreSQLMigrations
 {
     using System;
     using System.Data.Entity.Migrations;

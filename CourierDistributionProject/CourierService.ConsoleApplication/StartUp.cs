@@ -2,6 +2,7 @@
 using CourierService.DbContext.SQLServer.InitialDataToLoad;
 using CourierService.DbContextModels.SQLServer;
 using System;
+using CourierService.DbContext.PostgreSQL.DataToLoad;
 
 namespace CourierService.ConsoleApplication
 {
@@ -11,6 +12,9 @@ namespace CourierService.ConsoleApplication
         {
             var initialDataToSQLServer = new InicialDataToSQLServer();
             initialDataToSQLServer.InitialDataToSQLServeLoad();
+
+            var initialDataToPostgreSqlServer = new InitialDataToPostgreSQL();
+            initialDataToPostgreSqlServer.InitialDataToPostgreSQLLoad();
         }        
     }
 }

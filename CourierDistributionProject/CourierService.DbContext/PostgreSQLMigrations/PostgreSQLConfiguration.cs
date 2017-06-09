@@ -1,4 +1,4 @@
-namespace CourierService.DbContext.PostgreSQLMigration
+namespace CourierService.DbContext.PostgreSQLMigrations
 {
     using System;
     using System.Data.Entity;
@@ -10,7 +10,7 @@ namespace CourierService.DbContext.PostgreSQLMigration
         public PostgreSQLConfiguration()
         {
             AutomaticMigrationsEnabled = false;
-            MigrationsDirectory = @"PostgreSQLMigration";
+            MigrationsDirectory = @"PostgreSQLMigrations";
         }
 
         protected override void Seed(CourierService.DbContext.PostgreSQL.UsersDbContext context)
