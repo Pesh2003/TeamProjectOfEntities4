@@ -50,8 +50,8 @@ namespace CourierService.Models.SQLServer
                 Console.WriteLine("| DeTails           --> {0}", detailsFreight);
                 Console.WriteLine("| Destination city  --> {0}", destinationCity);
                 Console.WriteLine("| ServicesType | Weight |  Price |  TimeDuration ");
-                Console.WriteLine("| {0}      | {1}  |  {2}     |  {3}", addOptionsToForm.ServiceType, addOptionsToForm.Price,
-                    addOptionsToForm.Weight, addOptionsToForm.TimeDuration);
+                Console.WriteLine("| {0}      | {1}     |  {2} |  {3}", addOptionsToForm.ServiceType, addOptionsToForm.Weight,
+                    addOptionsToForm.Price, addOptionsToForm.TimeDuration);
 
                 if (Console.ReadLine() == "Y")
                 {
