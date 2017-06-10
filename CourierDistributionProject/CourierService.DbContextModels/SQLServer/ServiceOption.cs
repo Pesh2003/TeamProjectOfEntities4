@@ -13,7 +13,9 @@ namespace CourierService.DbContextModels.SQLServer
         }
         public int Id { get; set; }
 
-        [Required]             
+        [Required]
+        public int ServicesTypeId { get; set; }
+
         public virtual ServicesType ServicesType { get; set; }
 
         [Required]

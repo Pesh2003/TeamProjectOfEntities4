@@ -19,7 +19,7 @@ CONSTRAINT PK_Cities PRIMARY KEY (Id))
 -----------------------------------------
 
 ALTER TABLE Offices
-ADD CONSTRAINT FK_Offices_Cities FOREIGN KEY (Id) REFERENCES Cities(Id)
+ADD CONSTRAINT FK_Offices_Cities FOREIGN KEY (CityId) REFERENCES Cities(Id)
 -------------------------------------------------------------------------
 
 CREATE TABLE ServicesTypes(

@@ -13,7 +13,7 @@ namespace CourierService.DbContext.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201706080910043_initial"; }
+            get { return "201706081621437_initial"; }
         }
         
         string IMigrationMetadata.Source

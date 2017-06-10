@@ -68,6 +68,10 @@
       <Project>{96FCEC9D-4D1D-45EF-AEC0-D127BE4A9A5B}</Project>
       <Name>CourierService.DbContext</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CourierService.Models\CourierService.Models.csproj">
+      <Project>{51adcae4-3148-4419-b504-3b20187648e5}</Project>
+      <Name>CourierService.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
