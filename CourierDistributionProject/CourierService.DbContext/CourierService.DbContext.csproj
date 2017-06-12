@@ -72,11 +72,11 @@
     <Compile Include="Postgre\InitialDataToLoad\InitialDataToPostgreSQL.cs" />
     <Compile Include="Postgre\UsersDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SQLServerMigrations\201706121525088_Initial.cs" />
-    <Compile Include="SQLServerMigrations\201706121525088_Initial.Designer.cs">
+    <Compile Include="SQLServer\SQLServerMigrations\201706121525088_Initial.cs" />
+    <Compile Include="SQLServer\SQLServerMigrations\201706121525088_Initial.Designer.cs">
       <DependentUpon>201706121525088_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQLServerMigrations\SQLConfiguration.cs" />
+    <Compile Include="SQLServer\SQLServerMigrations\SQLConfiguration.cs" />
     <Compile Include="SQLServer\CorierServiceContext.cs" />
     <Compile Include="SQLServer\InitialDataToLoad\DataCities.cs" />
     <Compile Include="SQLServer\InitialDataToLoad\DataOffices.cs" />
@@ -102,7 +102,7 @@
     <EmbeddedResource Include="Postgre\PostgreSQLMigrations\201706121401304_Initial.resx">
       <DependentUpon>201706121401304_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SQLServerMigrations\201706121525088_Initial.resx">
+    <EmbeddedResource Include="SQLServer\SQLServerMigrations\201706121525088_Initial.resx">
       <DependentUpon>201706121525088_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

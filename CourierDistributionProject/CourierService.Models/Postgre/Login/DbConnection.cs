@@ -4,7 +4,7 @@ using CourierService.DbContext.Postgre;
 using CourierService.DbContextModels.Postgre;
 namespace CourierService.Models.Postgre.Login
 {
-    public class DbConnection
+    public class DbConnection : IDbConnection
     {
         public IList<User> GetUser(string username, string hashedPassword)
         {

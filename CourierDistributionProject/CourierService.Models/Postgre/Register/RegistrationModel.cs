@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
+using ApplicationModels.Model.Output;
 
 namespace CourierService.Models.Postgre.Register
 {
@@ -21,7 +18,7 @@ namespace CourierService.Models.Postgre.Register
 
             var dbConnection = new DbUserConnection();
             dbConnection.RegisterUser(username, hashedPassword, description, userTypeId);
-
+            ConsoleOutput.PrintLine("You have registered successfully");
         }
     }
 }

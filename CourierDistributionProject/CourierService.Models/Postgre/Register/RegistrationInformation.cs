@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using ApplicationModels.Model.Input;
 using ApplicationModels.Model.Output;
 using CourierService.DbContext.Postgre.InitialDataToLoad;
 
 namespace CourierService.Models.Postgre.Register
 {
-   public class RegistrationInformation
+   public class RegistrationInformation : IRegistrationInformation
     {
         public IList<string> GetRegistrationInformation()
         {
@@ -46,11 +42,19 @@ namespace CourierService.Models.Postgre.Register
             var description = ConsoleInput.ReadLine();
             userInfo.Add(description);
 
-            ConsoleOutput.PrintLine("Enter UserType: \n " +
+            ConsoleOutput.PrintLine("Enter UserType: \n" +
                                     "1 - Service Creator\n" +
                                     "2 - Service Fixer");
 
             var userType = ConsoleInput.ReadLine();
+
+            while (userType.Length != 1)
+            {
+                ConsoleOutput.PrintLine("You have entered invalid UserType!");
+
+                ConsoleOutput.PrintLine("Enter UserType: ");
+                userType = ConsoleInput.ReadLine();
+            }
             userInfo.Add(userType);
 
             return userInfo;

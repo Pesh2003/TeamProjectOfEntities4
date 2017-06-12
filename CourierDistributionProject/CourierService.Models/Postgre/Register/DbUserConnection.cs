@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CourierService.DbContext.Postgre;
+﻿using CourierService.DbContext.Postgre;
 using CourierService.DbContextModels.Postgre;
 
 namespace CourierService.Models.Postgre.Register
 {
-   public class DbUserConnection
+   public class DbUserConnection : IDbUserConnection
     {
         public void RegisterUser(string username, string hashedPassword, string description, int userType)
         {

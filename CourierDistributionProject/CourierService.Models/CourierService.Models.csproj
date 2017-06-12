@@ -67,10 +67,14 @@
     <Compile Include="Model\Input\ConsoleInput.cs" />
     <Compile Include="Model\Output\ConsoleOutput.cs" />
     <Compile Include="Postgre\Login\DbConnection.cs" />
+    <Compile Include="Postgre\Login\Contracts\IDbConnection.cs" />
+    <Compile Include="Postgre\Login\Contracts\ILoginInformation.cs" />
     <Compile Include="Postgre\Login\UserDetails.cs" />
     <Compile Include="Postgre\Login\LoginInformation.cs" />
     <Compile Include="Postgre\Login\LoginModel.cs" />
     <Compile Include="Postgre\Register\DbUserConnection.cs" />
+    <Compile Include="Postgre\Register\Contracts\IDbUserConnection.cs" />
+    <Compile Include="Postgre\Register\Contracts\IRegistrationInformation.cs" />
     <Compile Include="Postgre\Register\RegistrationInformation.cs" />
     <Compile Include="Postgre\Register\RegistrationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
