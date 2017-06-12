@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 namespace CourierService.DbContext.SQLServer.QueryHelpClasses
 {
     public class ServiceOptionQuery
-    {
+    { 
+        public int ServOptionId { get; set; }
+
         public double Weight { get; set; }
 
         public decimal Price { get; set; }

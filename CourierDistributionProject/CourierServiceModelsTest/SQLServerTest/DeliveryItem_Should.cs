@@ -1,5 +1,6 @@
 ﻿using CourierService.DbContext.SQLServer;
 using CourierService.Models.SQLServer;
+using CourierService.Models.SQLServer.Contracts;
 using Moq;
 using NUnit.Framework;
 using System;
@@ -16,14 +17,14 @@ namespace CourierServiceModelsTest.SQLServerTest
         [Test]
         public void DoSomting()
         {
-            var formAdderMock = new Mock<IFormAdder>();
-            var dbContMock = new Mock<ICorierServiceContext>();
-            var sut = new DeliveryItem(dbContMock.Object, formAdderMock.Object);
+          //  var formAdderMock = new Mock<IQueriesDeliveryItemAdder>();
+          //  var dbContMock = new Mock<ICorierServiceContext>();
+          //  var sut = new DeliveryItemCreator(dbContMock.Object, formAdderMock.Object);
 
             //dbContMock.Setup(s => s.)
-            formAdderMock.Setup(s => s.AddOfficeToForm(dbContMock.Object)).Returns(new List<string>() { "Pesho", "Gosho" });
+          //  formAdderMock.Setup(s => s.AddOfficeToForm(dbContMock.Object)).Returns(new List<string>() { "Pesho", "Gosho" });
 
-            sut.declareItem();
+         //   sut.declareItem();
         }
     }
 }

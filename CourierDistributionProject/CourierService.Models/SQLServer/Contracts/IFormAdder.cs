@@ -8,9 +8,14 @@ using System.Threading.Tasks;
 
 namespace CourierService.Models.SQLServer.Contracts
 {
-    public interface IFormAdder
+    public interface IQueriesDeliveryItem
     {
         IList<string> AddOfficeToForm(ICorierServiceContext dbContext);
+
         ServiceOptionQuery AddOptionsToForm(ICorierServiceContext dbContext);
+
+        IList<string> AddCityToForm(ICorierServiceContext dbContext);
+
+        void QueryAllServicesOfGivenUser(ICorierServiceContext dbContext, int userId);
     }
 }

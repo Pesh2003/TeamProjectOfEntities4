@@ -12,15 +12,15 @@
 
         }
 
-        public IDbSet<Office> Offices { get; set; }
+        public virtual IDbSet<Office> Offices { get; set; }
 
-        public IDbSet<City> Cities { get; set; }
+        public virtual IDbSet<City> Cities { get; set; }
 
-        public IDbSet<ServicesType> ServicesTypes { get; set; }
+        public virtual IDbSet<ServicesType> ServicesTypes { get; set; }
 
-        public IDbSet<ServiceOption> ServiceOptions { get; set; }
+        public virtual IDbSet<ServiceOption> ServiceOptions { get; set; }
 
-        public IDbSet<Service> Services { get; set; }
+        public virtual IDbSet<Service> Services { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -38,6 +38,8 @@
 
     public interface ICorierServiceContext
     {
+        int SaveChanges();
+
         IDbSet<Office> Offices { get; set; }
 
         IDbSet<City> Cities { get; set; }

@@ -20,7 +20,9 @@ namespace CourierService.DbContext.SQLServer.InitialDataToLoad
                 City = dbContext.Cities.Find(1),
                 ServiceOption = dbContext.ServiceOptions.Find(7),
                 CreateDate = DateTime.Now,
-                OfficeId = 1
+                OfficeId = 1,
+                IsCompleted = false,
+                UserId = 1
             };
 
             var service2 = new Service()
@@ -30,7 +32,9 @@ namespace CourierService.DbContext.SQLServer.InitialDataToLoad
                 City = dbContext.Cities.Find(5),
                 ServiceOption = dbContext.ServiceOptions.Find(5),
                 CreateDate = DateTime.Now,
-                OfficeId = 3
+                OfficeId = 3,
+                IsCompleted = false,
+                UserId = 1
             };
 
             var service3 = new Service()
@@ -40,7 +44,9 @@ namespace CourierService.DbContext.SQLServer.InitialDataToLoad
                 City = dbContext.Cities.Find(4),
                 ServiceOption = dbContext.ServiceOptions.Find(3),
                 CreateDate = DateTime.Now,
-                OfficeId = 6
+                OfficeId = 6,
+                IsCompleted = false,
+                UserId = 1
             };
 
             var service4 = new Service()
@@ -50,7 +56,9 @@ namespace CourierService.DbContext.SQLServer.InitialDataToLoad
                 City = dbContext.Cities.Find(2),
                 ServiceOption = dbContext.ServiceOptions.Find(8),
                 CreateDate = DateTime.Now,
-                OfficeId = 4
+                OfficeId = 4,
+                IsCompleted = false,
+                UserId = 2
             };
 
             var service5 = new Service()
@@ -60,7 +68,9 @@ namespace CourierService.DbContext.SQLServer.InitialDataToLoad
                 City = dbContext.Cities.Find(1),
                 ServiceOption = dbContext.ServiceOptions.Find(5),
                 CreateDate = DateTime.Now,
-                OfficeId = 1
+                OfficeId = 1,
+                IsCompleted = false,
+                UserId = 2
             };
 
             var service6 = new Service()
@@ -70,7 +80,9 @@ namespace CourierService.DbContext.SQLServer.InitialDataToLoad
                 City = dbContext.Cities.Find(4),
                 ServiceOption = dbContext.ServiceOptions.Find(2),
                 CreateDate = DateTime.Now,
-                OfficeId = 1
+                OfficeId = 1,
+                IsCompleted = false,
+                UserId = 3
             };
 
             dbContext.Services.Add(service1);

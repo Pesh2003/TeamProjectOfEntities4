@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourierService.Models.SQLServer.Contracts
 {
-    public interface IDeliveryItem
+    public interface IDeliveryItemCreator
     {
         void declareItem();
     }

@@ -49,12 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201706081319592_sdf.cs" />
-    <Compile Include="Migrations\201706081621437_initial.cs" />
-    <Compile Include="Migrations\201706081621437_initial.Designer.cs">
-      <DependentUpon>201706081621437_initial.cs</DependentUpon>
+    <Compile Include="SQLServer\Migrations\201706111847506_inisial.cs" />
+    <Compile Include="SQLServer\Migrations\201706111847506_inisial.Designer.cs">
+      <DependentUpon>201706111847506_inisial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="SQLServer\Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLServer\CorierServiceContext.cs" />
     <Compile Include="SQLServer\InitialDataToLoad\DataCities.cs" />
@@ -76,11 +75,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706081319592_sdf.resx">
-      <DependentUpon>201706081319592_sdf.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706081621437_initial.resx">
-      <DependentUpon>201706081621437_initial.cs</DependentUpon>
+    <EmbeddedResource Include="SQLServer\Migrations\201706111847506_inisial.resx">
+      <DependentUpon>201706111847506_inisial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

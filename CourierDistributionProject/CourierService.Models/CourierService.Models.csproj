@@ -53,9 +53,16 @@
     <Compile Include="SQLServer\CommandParser.cs" />
     <Compile Include="SQLServer\Contracts\ICommandParser.cs" />
     <Compile Include="SQLServer\Contracts\IDeliveryItem.cs" />
+    <Compile Include="SQLServer\Contracts\IDistributionPicker.cs" />
+    <Compile Include="SQLServer\Contracts\IDistributionReleaser.cs" />
     <Compile Include="SQLServer\Contracts\IFormAdder.cs" />
-    <Compile Include="SQLServer\DeliveryItem.cs" />
-    <Compile Include="SQLServer\FormAdder.cs" />
+    <Compile Include="SQLServer\Contracts\IQueriesFixer.cs" />
+    <Compile Include="SQLServer\DeliveryDropper\DeliveryItemCreator.cs" />
+    <Compile Include="SQLServer\DistributionFixer\DistributionPicker.cs" />
+    <Compile Include="SQLServer\DistributionFixer\DistributionReleaser.cs" />
+    <Compile Include="SQLServer\EntryPointToSQL.cs" />
+    <Compile Include="SQLServer\DeliveryDropper\QueriesDeliveryItem.cs" />
+    <Compile Include="SQLServer\DistributionFixer\QueriesFixer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -71,6 +78,7 @@
       <Name>CourierService.DbContext</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

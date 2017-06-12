@@ -8,6 +8,8 @@ namespace CourierService.Models.SQLServer.Contracts
 {
     public interface ICommandParser
     {
-        int CommandParse(int ExistingRowsInDB, string type);
+        int CommandParse(IList<int> ExistingRowsInDB, string type);
+
+        int CommandParse(string type);
     }
 }
