@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ApplicationModels.Model.Input;
+using ApplicationModels.Model.Output;
 
 namespace CourierService.Models.SQLServer
 {
@@ -22,11 +24,11 @@ namespace CourierService.Models.SQLServer
 
         public int Header()
         {
-            Console.WriteLine("*****************************************");
-            Console.WriteLine("   Choose service");
-            Console.WriteLine("-----------------------------------------");
-            Console.WriteLine(" 1 Declare an item for delivery");
-            Console.WriteLine(" 2 Get / Release an Item of distribution (Fixer)");
+            ConsoleOutput.PrintLine("*****************************************");
+            ConsoleOutput.PrintLine("   Choose service");
+            ConsoleOutput.PrintLine("-----------------------------------------");
+            ConsoleOutput.PrintLine(" 1 Declare an item for delivery");
+            ConsoleOutput.PrintLine(" 2 Get / Release an Item of distribution (Fixer)");
 
             var parsedCommand = comandParser.CommandParse("Service");
 
@@ -42,10 +44,10 @@ namespace CourierService.Models.SQLServer
             IQueriesDeliveryItem queriesDeliveryItem = new QueriesDeliveryItem(comandParser);
 
             Console.WriteLine("Do you what to see all your created deliveries -->  Y / N ");
-            if (Console.ReadLine().ToLower() == "y")
+            if (ConsoleInput.ReadLine().ToLower() == "y")
             {
                 queriesDeliveryItem.QueryAllServicesOfGivenUser(dbContext, userId);
-                if (Console.ReadLine().ToLower() == "exit")
+                if (ConsoleInput.ReadLine().ToLower() == "exit")
                 {
                     return;
                 }

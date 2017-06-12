@@ -8,42 +8,23 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using CourierService.DbContext.Postgre.InitialDataToLoad;
+using CourierService.Models;
 
 namespace CourierService.ConsoleApplication
 {
-    class StartUpSQL1
+   public class StartUpSQL1
     {
-        static void Mainn(string[] args)
+       public static void Main(string[] args)
         {
-            //var initialDataToSQLServer = new InicialDataToSQLServer();
-            //initialDataToSQLServer.InitialDataToSQLServeLoad();
-            
-            // 1 Declare an item for delivery
-            // 2 Get an Item to deliver (Fixer)
-            ICommandParser comandParser = new CommandParser();
-            ICorierServiceContext dbContext = new CorierServiceContext();
-            var entryPointSQL = new EntryPointToSQL(dbContext, comandParser);
+          // var initialDataToSQLServer = new InicialDataToSQLServer();
+          // initialDataToSQLServer.InitialDataToSQLServeLoad();
 
-            while (true)
-            {
-                var parsedCommand = entryPointSQL.Header();
-                if (parsedCommand == 0)
-                {
-                    break;
-                }
-
-                Console.WriteLine("Enter UserId");
-                int userId = int.Parse(Console.ReadLine());
-
-                if (parsedCommand == 1)
-                {
-                    entryPointSQL.AssignItams(userId);
-                }
-                else
-                {
-                    entryPointSQL.CommitDistribution(userId);
-                }
-            }
+            // var initialDataToPostgreSQL = new InitialDataToPostgreSQL();
+            // initialDataToPostgreSQL.InicialDataToPostgreSQLLoad();
+          
+            var application = new ApplicationTest();
+            application.Run();
         }
     }
 }

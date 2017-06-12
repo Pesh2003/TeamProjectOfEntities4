@@ -38,9 +38,21 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EntityFramework6.Npgsql, Version=3.1.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework6.Npgsql.3.1.1\lib\net45\EntityFramework6.Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=3.2.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.2.3\lib\net451\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,12 +61,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SQLServer\Migrations\201706111847506_inisial.cs" />
-    <Compile Include="SQLServer\Migrations\201706111847506_inisial.Designer.cs">
-      <DependentUpon>201706111847506_inisial.cs</DependentUpon>
+    <Compile Include="Postgre\PostgreSQLMigrations\201706121401304_Initial.cs" />
+    <Compile Include="Postgre\PostgreSQLMigrations\201706121401304_Initial.Designer.cs">
+      <DependentUpon>201706121401304_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQLServer\Migrations\Configuration.cs" />
+    <Compile Include="Postgre\PostgreSQLMigrations\PostgreSQLConfiguration.cs" />
+    <Compile Include="Postgre\InitialDataToLoad\DataUsers.cs" />
+    <Compile Include="Postgre\InitialDataToLoad\DataUserTypes.cs" />
+    <Compile Include="Postgre\InitialDataToLoad\Hasher.cs" />
+    <Compile Include="Postgre\InitialDataToLoad\InitialDataToPostgreSQL.cs" />
+    <Compile Include="Postgre\UsersDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLServerMigrations\201706121525088_Initial.cs" />
+    <Compile Include="SQLServerMigrations\201706121525088_Initial.Designer.cs">
+      <DependentUpon>201706121525088_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLServerMigrations\SQLConfiguration.cs" />
     <Compile Include="SQLServer\CorierServiceContext.cs" />
     <Compile Include="SQLServer\InitialDataToLoad\DataCities.cs" />
     <Compile Include="SQLServer\InitialDataToLoad\DataOffices.cs" />
@@ -65,7 +87,9 @@
     <Compile Include="SQLServer\QueryHelpClasses\ServiceOptionQuery.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -75,8 +99,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SQLServer\Migrations\201706111847506_inisial.resx">
-      <DependentUpon>201706111847506_inisial.cs</DependentUpon>
+    <EmbeddedResource Include="Postgre\PostgreSQLMigrations\201706121401304_Initial.resx">
+      <DependentUpon>201706121401304_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLServerMigrations\201706121525088_Initial.resx">
+      <DependentUpon>201706121525088_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

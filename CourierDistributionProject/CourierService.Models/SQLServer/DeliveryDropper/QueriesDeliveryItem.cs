@@ -1,13 +1,11 @@
 ﻿using CourierService.DbContext.SQLServer;
 using CourierService.DbContext.SQLServer.QueryHelpClasses;
-using CourierService.DbContextModels.SQLServer;
 using CourierService.Models.SQLServer.Contracts;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ApplicationModels.Model.Input;
+using ApplicationModels.Model.Output;
 
 namespace CourierService.Models.SQLServer
 {
@@ -42,7 +40,7 @@ namespace CourierService.Models.SQLServer
             var officeIdList = new List<int>();
             foreach (var item in allOffices.OrderBy(t => t.cityName).ThenBy(f => f.offceId))
             {               
-                Console.WriteLine($"  {item.offceId} {item.cityName}  {item.address}");
+                ConsoleOutput.PrintLine($"  {item.offceId} {item.cityName}  {item.address}");
                 officeIdList.Add(item.offceId);
             }
 
@@ -86,16 +84,16 @@ namespace CourierService.Models.SQLServer
                                      ServiceType = servTy.ServiceType
                                  };
 
-            Console.WriteLine("Num | Weight |  Price |  TimeDuration | ServicesType");
+            ConsoleOutput.PrintLine("Num | Weight |  Price |  TimeDuration | ServicesType");
 
             var serviceOptionsIdList = new List<int>();
             foreach (var item in serviceOptions)
             {
                 
-                Console.WriteLine($" {item.Id}    {item.Weight}       {item.Price}       {item.TimeDuration}              {item.ServiceType}");
+                ConsoleOutput.PrintLine($" {item.Id}    {item.Weight}       {item.Price}       {item.TimeDuration}              {item.ServiceType}");
                 serviceOptionsIdList.Add(item.Id);
             }
-            Console.WriteLine("-----");
+            ConsoleOutput.PrintLine("-----");
 
 
             var typeChosen = commandParser.CommandParse(serviceOptionsIdList, "ServiceOption");
@@ -119,7 +117,7 @@ namespace CourierService.Models.SQLServer
         public IList<string> AddCityToForm(ICorierServiceContext dbContext)
         {
             var result = new List<string>();
-            var destinationCity = Console.ReadLine();
+            var destinationCity = ConsoleInput.ReadLine();
             var cityName = dbContext.Cities.Select(t => t.CityName).ToList();
 
             cityName.Sort();
@@ -129,8 +127,8 @@ namespace CourierService.Models.SQLServer
 
             if (searchCity == null)
             {
-                Console.WriteLine(" There is no such a city name \n  (Please type one from the list) ");
-                Console.WriteLine("-----------------------------------------------");
+                ConsoleOutput.PrintLine(" There is no such a city name \n  (Please type one from the list) ");
+               ConsoleOutput.PrintLine("-----------------------------------------------");
 
                 foreach (var item in cityName)
                 {
