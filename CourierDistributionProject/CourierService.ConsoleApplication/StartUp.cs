@@ -13,7 +13,7 @@ using CourierService.Models;
 
 namespace CourierService.ConsoleApplication
 {
-   public class StartUpSQL1
+   public class StartUp
     {
        public static void Main(string[] args)
         {

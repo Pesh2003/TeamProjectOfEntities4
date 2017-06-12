@@ -39,11 +39,7 @@ namespace CourierService.Models
 
                         while (true)
                         {
-                          //  var parsedCommand = entryPointSQL.Header();
-                          //  if (parsedCommand == 0)
-                          //  {
-                          //      break;
-                          //  }
+                         
 
                             int userId = user[0].Id;
                             int userTypeId = user[0].UserTypeId;
@@ -51,15 +47,16 @@ namespace CourierService.Models
                             if (userTypeId == 1)
                             {
                                 entryPointSQL.AssignItams(userId);
+                                return;
                             }
                             else
                             {
                                 entryPointSQL.CommitDistribution(userId);
+                                return;
                             }
                         }
                         
-                        }
-                        break;
+                        }                       
                     case "3":
                     {
                         ConsoleOutput.PrintLine(Constant.EXIT_SUCCESSFUL);
