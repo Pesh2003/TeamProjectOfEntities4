@@ -64,6 +64,10 @@
     <Compile Include="Postgre\User.cs" />
     <Compile Include="Postgre\UsersType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLite\Brand.cs" />
+    <Compile Include="SQLite\Category.cs" />
+    <Compile Include="SQLite\Model.cs" />
+    <Compile Include="SQLite\Vehicle.cs" />
     <Compile Include="SQLServer\City.cs" />
     <Compile Include="SQLServer\Office.cs" />
     <Compile Include="SQLServer\Service.cs" />

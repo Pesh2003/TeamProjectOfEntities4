@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading;
 using CourierService.DbContext.Postgre.InitialDataToLoad;
 using CourierService.Models;
+using CourierService.DbContext.SQLite;
 
 namespace CourierService.ConsoleApplication
 {
@@ -17,12 +18,15 @@ namespace CourierService.ConsoleApplication
     {
        public static void Main(string[] args)
         {
-          // var initialDataToSQLServer = new InicialDataToSQLServer();
-          // initialDataToSQLServer.InitialDataToSQLServeLoad();
+            // var initialDataToSQLServer = new InicialDataToSQLServer();
+            // initialDataToSQLServer.InitialDataToSQLServeLoad();
 
             // var initialDataToPostgreSQL = new InitialDataToPostgreSQL();
             // initialDataToPostgreSQL.InicialDataToPostgreSQLLoad();
-          
+
+            SqliteDbContext context = new SqliteDbContext();
+            var cats = context.Categories;
+
             var application = new ApplicationTest();
             application.Run();
         }
