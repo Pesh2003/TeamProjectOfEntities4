@@ -23,10 +23,7 @@ namespace CourierService.ConsoleApplication
 
             // var initialDataToPostgreSQL = new InitialDataToPostgreSQL();
             // initialDataToPostgreSQL.InicialDataToPostgreSQLLoad();
-
-            SqliteDbContext context = new SqliteDbContext();
-            var cats = context.Categories;
-
+            
             var application = new ApplicationTest();
             application.Run();
         }
